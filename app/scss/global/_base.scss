@@ -1,0 +1,93 @@
+html {
+  font-size: $font-size;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  font-family: $primary-font;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #fff;
+  color: $base-color;
+}
+
+.container {
+  @include make-container();
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  outline: none;
+
+  &:hover {
+    color: $link-color--hover;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 1em;
+  margin-bottom: 0.6em;
+}
+
+h1,
+.h1 {
+  font-size: rem(32);
+}
+
+h2,
+.h2 {
+  font-size: rem(27);
+}
+
+h3,
+.h3 {
+  font-size: rem(23);
+}
+
+h4,
+.h4 {
+  font-size: rem(21);
+}
+
+
+p {
+  margin-top: 0;
+  margin-bottom: 0.6em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.visuallyhidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.hr {
+  @include make-container-fluid();
+
+  margin-top: ($grid-gutter-width * 1.5);
+  margin-bottom: ($grid-gutter-width * 1.5);
+  height: 1px;
+  background-color: $muted-color;
+  background-clip: content-box;
+}

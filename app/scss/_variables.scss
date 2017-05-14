@@ -1,0 +1,60 @@
+// Colors
+$base-color: #2d3943;
+$accent-color: #ff6633;
+
+
+$success-color: #11fd6d;
+$info-color: #b9dfff;
+$warning-color: #edf512;
+$danger-color: #fd0d4d;
+
+$white-color: #ffffff;
+$light-color: #e4e4e4;
+$muted-color: #999;
+$link-color: $accent-color;
+$link-color--hover: mix($base-color, $link-color, 15%);
+
+
+// Fonts
+$font-size--smaller: 12px;
+$font-size--small: 14px;
+$font-size: 16px;
+$font-size--large: 18px;
+$font-size--largest: 20px;
+
+$primary-font: "Roboto", "Calibri", "Candara", "Segoe", "Segoe UI", "Optima", "Arial", sans-serif;
+$secondary-font: inherit;
+
+$duration: 0.22s;
+
+$box-shadow: 0 1px 2px rgba(#000, 0.2);
+$box-shadow--hover: 0 3px 6px rgba(#000, 0.4);
+
+
+// Grid
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+
+// Media querys
+$xs-width: 0;
+$sm-width: 568px;
+$md-width: 768px;
+$lg-width: 992px;
+$xl-width: 1200px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 568px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px
+);
+
+$grid-max-widths: (
+  sm: none,
+  md: none,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1280px
+);

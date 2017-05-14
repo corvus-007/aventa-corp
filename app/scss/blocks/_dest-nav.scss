@@ -1,0 +1,122 @@
+$dest-nav-gutter: 10px;
+
+.dest-nav {
+
+  // padding-top: $grid-gutter-width;
+  // padding-bottom: $grid-gutter-width;
+
+  @include media-breakpoint-down(xl) {
+    @include make-container-fluid();
+  }
+}
+
+.dest-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dest-nav__item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: ($grid-gutter-width);
+  color: $base-color;
+  border: 1px solid $light-color;
+  box-shadow: $box-shadow;
+  box-sizing: border-box;
+  transition: box-shadow $duration;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    display: block;
+    padding-top: 150px;
+    margin-top: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &:hover,
+  &:focus {
+    color: $base-color;
+    box-shadow: $box-shadow--hover;
+  }
+
+  &--offices::after {
+    background-image: url("../../img/dest-nav/offices.jpg");
+  }
+
+  &--a-system::after {
+    background-image: url("../../img/dest-nav/a-system.jpg");
+  }
+
+  &--e-shop::after {
+    background-image: url("../../img/dest-nav/e-shop.jpg");
+  }
+
+  &--electroboard::after {
+    background-image: url("../../img/dest-nav/electroboard.jpg");
+  }
+
+  &--electrical-work::after {
+    background-image: url("../../img/dest-nav/electrical-work.jpg");
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin-bottom: $dest-nav-gutter;
+    margin-right: $dest-nav-gutter;
+  }
+
+  @media (min-width: $sm-width) and (max-width: ($lg-width - 1px)) {
+    width: calc((100% - #{$dest-nav-gutter}) / 2);
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: $lg-width) and (max-width: ($xl-width - 1px)) {
+    width: calc((100% - 2 * #{$dest-nav-gutter}) / 3);
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: calc((100% - 4 * #{$dest-nav-gutter}) / 5);
+
+    &:nth-child(5n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.dest-nav__item-title {
+  display: block;
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: $font-size--large;
+  transition: color $duration;
+}
+
+.dest-nav__item:hover .dest-nav__item-title,
+.dest-nav__item:focus .dest-nav__item-title {
+  color: $accent-color;
+}
+
+.dest-nav__item-description {
+  font-size: $font-size--small;
+  margin-bottom: 15px;
+}
+
+.dest-nav__item-image-wrapper {
+
+}
+
+.dest-nav__item-image {
+
+}

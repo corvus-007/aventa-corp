@@ -1,0 +1,36 @@
+@import "normalize";
+
+@import "variables";
+@import "functions";
+@import "mixins";
+
+// Global
+@import "global/fonts";
+@import "global/grid";
+@import "global/base";
+@import "global/layout";
+
+// Vendors
+@import "vendors/slick";
+@import "vendors/magnific-popup";
+@import "vendors/jquery.mmenu";
+
+// Blocks
+@import "blocks/button";
+@import "blocks/form";
+@import "blocks/table";
+@import "blocks/popup";
+@import "blocks/custom-ol";
+@import "blocks/custom-ul";
+@import "blocks/site-header";
+@import "blocks/main-nav";
+@import "blocks/hamburger-menu";
+@import "blocks/index-slider";
+@import "blocks/dest-nav";
+@import "blocks/about-us";
+@import "blocks/events-preview";
+@import "blocks/page";
+@import "blocks/toggler-nav";
+@import "blocks/archive-events";
+@import "blocks/site-footer";
+@import "blocks/socials";

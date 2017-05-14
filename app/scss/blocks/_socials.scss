@@ -1,0 +1,29 @@
+.socials {
+  display: flex;
+  text-align: center;
+}
+
+.socials__item {
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  margin-right: 0.5em;
+  filter: brightness(0.5);
+  transition: filter $duration;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover,
+  &:focus {
+    filter: brightness(1);
+  }
+}
+
+.socials__icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 34px;
+  height: 34px;
+}

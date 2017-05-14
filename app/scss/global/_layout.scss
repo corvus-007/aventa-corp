@@ -1,0 +1,21 @@
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  @include media-breakpoint-up(xxl) {
+    margin-left: 3vw;
+    margin-right: 3vw;
+  }
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.index-sections-group {
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+  }
+}

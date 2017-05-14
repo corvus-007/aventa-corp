@@ -1,0 +1,44 @@
+.site-header {
+  padding-top: $grid-gutter-width;
+  padding-bottom: $grid-gutter-width;
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header__logo {
+
+  @include media-breakpoint-down(sm) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.site-header__nav {
+  @include media-breakpoint-up(md) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.site-header__phone {
+  display: flex;
+  align-items: center;
+  font-size: $font-size--small;
+  color: $base-color;
+  white-space: nowrap;
+  transition: color $duration;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 0;
+  }
+}
+
+.site-header__phone-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
