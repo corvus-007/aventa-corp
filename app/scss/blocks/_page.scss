@@ -1,0 +1,11 @@
+.page {
+  @include make-container();
+
+  width: calc(100% - #{$grid-gutter-width});
+}
+
+.page__title {
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+}

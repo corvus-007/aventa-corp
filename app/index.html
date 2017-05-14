@@ -7,7 +7,7 @@
   <title>Авента - главная</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="homepage">
   <div class="site-wrapper">
     @@include('blocks/site-header.html')
     <div class="index-slider">
@@ -71,10 +71,10 @@
       <section class="events-preview">
         <div class="events-preview__headline">
           <h2 class="events-preview__title">Новости компании</h2>
-          <a class="events-preview__all-link" href="#">Все новости</a>
+          <a class="events-preview__all-link" href="news.html">Все новости</a>
         </div>
-        <ul class="events-preview__list">
-          <li class="events-preview__item">
+        <div class="events-preview__list">
+          <article class="events-preview__item">
             <time class="events-preview__date" datetime="2017-05-11">
               <span class="events-preview__day">11</span>
               <span class="events-preview__month">мая</span>
@@ -91,8 +91,8 @@
               </div>
               <a class="events-preview__more-link" href="#">Подробнее</a>
             </div>
-          </li>
-          <li class="events-preview__item">
+          </article>
+          <article class="events-preview__item">
             <time class="events-preview__date" datetime="2017-04-25">
               <span class="events-preview__day">25</span>
               <span class="events-preview__month">апреля</span>
@@ -109,8 +109,8 @@
               </div>
               <a class="events-preview__more-link" href="#">Подробнее</a>
             </div>
-          </li>
-          <li class="events-preview__item">
+          </article>
+          <article class="events-preview__item">
             <time class="events-preview__date" datetime="2017-05-05">
               <span class="events-preview__day">05</span>
               <span class="events-preview__month">мая</span>
@@ -127,8 +127,8 @@
               </div>
               <a class="events-preview__more-link" href="#">Подробнее</a>
             </div>
-          </li>
-        </ul>
+          </article>
+        </div>
       </section>
     </div>
     @@include('blocks/site-footer.html')

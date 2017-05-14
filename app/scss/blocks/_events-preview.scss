@@ -4,6 +4,10 @@
   box-sizing: border-box;
 
   @include media-breakpoint-up(lg) {
+    width: 50%;
+  }
+
+  @include media-breakpoint-up(xl) {
     width: percentage(7/12);
   }
 }
@@ -51,14 +55,6 @@
     margin-bottom: 0;
     padding: ($grid-gutter-width / 3);
   }
-
-  @media (min-width: $lg-width) and (max-width: ($xl-width - 1px)) {
-    // width: 50%;
-
-    &:nth-child(3) {
-      // display: none;
-    }
-  }
 }
 
 .events-preview__date {
@@ -66,7 +62,7 @@
   align-self: flex-start;
   width: 50px;
   padding: 10px 5px;
-  margin-right: ($grid-gutter-width / 2);
+  margin-right: ($grid-gutter-width / 3);
   font-size: $font-size--smaller;
   line-height: 1;
   overflow: hidden;

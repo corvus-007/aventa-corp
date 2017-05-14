@@ -1,5 +1,9 @@
 .index-slider {
 
+  @include media-breakpoint-down(xs) {
+    display: none;
+  }
+
   .slick-dots {
     @include clear-list();
 

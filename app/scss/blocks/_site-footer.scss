@@ -1,7 +1,7 @@
 .site-footer {
   margin-top: $grid-gutter-width;
   padding-top: $grid-gutter-width;
-  padding-top: $grid-gutter-width;
+  padding-bottom: $grid-gutter-width;
   font-size: $font-size--small;
 
   @include media-breakpoint-up(md) {
@@ -22,7 +22,7 @@
   @include media-breakpoint-up(md) {
     align-items: flex-start;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 }
 
@@ -30,11 +30,15 @@
   margin-bottom: $grid-gutter-width;
   text-align: center;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @include media-breakpoint-up(md) {
     margin-bottom: 0;
     // width: calc((100% - 3 * (#{$grid-gutter-width} / 1)) / 4);
     margin-right: ($grid-gutter-width / 1);
-    flex-grow: 1;
+    // flex-grow: 1;
     text-align: left;
 
     &:last-child {
