@@ -13,13 +13,19 @@
     <main class="main page">
       <h1 class="page__title">Новости компании</h1>
       <div class="archive-events">
-        <ul class="archive-events__filter">
-          <li><a href="#">Все</a></li>
-          <li><a href="#">События</a></li>
-          <li><a href="#">Акции</a></li>
+        <ul class="archive-events__filters-list">
+          <li class="archive-events__filter">
+            <a class="archive-events__filter-control archive-events__filter-control--active" href="#" data-filter="*">Все</a>
+          </li>
+          <li class="archive-events__filter">
+            <a class="archive-events__filter-control" href="#" data-filter="[data-event]">События</a>
+          </li>
+          <li class="archive-events__filter">
+            <a class="archive-events__filter-control" href="#" data-filter="[data-promo]">Акции</a>
+          </li>
         </ul>
         <div class="archive-events__list">
-          <article class="archive-events__item">
+          <article class="archive-events__item" data-promo>
             <time class="archive-events__date" datetime="2017-05-11">
               <span class="archive-events__day">11</span>
               <span class="archive-events__month">мая</span>
@@ -37,7 +43,7 @@
               <a class="archive-events__more-link" href="#">Подробнее</a>
             </div>
           </article>
-          <article class="archive-events__item">
+          <article class="archive-events__item" data-event>
             <time class="archive-events__date" datetime="2017-04-25">
               <span class="archive-events__day">25</span>
               <span class="archive-events__month">апреля</span>
@@ -56,7 +62,7 @@
               <a class="archive-events__more-link" href="#">Подробнее</a>
             </div>
           </article>
-          <article class="archive-events__item">
+          <article class="archive-events__item" data-promo>
             <time class="archive-events__date" datetime="2017-05-05">
               <span class="archive-events__day">05</span>
               <span class="archive-events__month">мая</span>
