@@ -3,9 +3,10 @@
   flex-direction: column;
   min-height: 100vh;
 
-  @include media-breakpoint-up(xxl) {
-    margin-left: 3vw;
-    margin-right: 3vw;
+  @include media-breakpoint-up(lg) {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    outline: 1px solid #78d;
   }
 }
 

@@ -16,11 +16,11 @@ $link-color--hover: mix($base-color, $link-color, 15%);
 
 
 // Fonts
-$font-size--smaller: 12px;
-$font-size--small: 14px;
-$font-size: 16px;
-$font-size--large: 18px;
-$font-size--largest: 20px;
+$font-size--smaller: 11px;
+$font-size--small: 13px;
+$font-size: 15px;
+$font-size--large: 17px;
+$font-size--largest: 19px;
 
 $primary-font: "Roboto", "Calibri", "Candara", "Segoe", "Segoe UI", "Optima", "Arial", sans-serif;
 $secondary-font: inherit;
@@ -48,13 +48,13 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1600px
+  xxl: 1440px
 );
 
 $grid-max-widths: (
   sm: none,
   md: none,
   lg: 960px,
-  xl: 1140px,
-  xxl: 1280px
+  xl: 1100px,
+  xxl: 1100px
 );

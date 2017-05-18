@@ -8,8 +8,11 @@
   vertical-align: middle;
   text-decoration: none;
   margin-right: 0.5em;
-  filter: brightness(0.5);
-  transition: filter $duration;
+  padding: 5px;
+  color: $base-color;
+  border: 1px solid;
+  border-radius: 2px;
+  transition: color $duration;
 
   &:last-child {
     margin-right: 0;
@@ -24,4 +27,5 @@
 .socials__icon {
   display: inline-block;
   vertical-align: middle;
+  fill: currentColor;
 }

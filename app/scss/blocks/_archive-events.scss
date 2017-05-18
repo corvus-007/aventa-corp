@@ -6,6 +6,7 @@
   @include clear-list();
 
   display: flex;
+  justify-content: center;
   margin-bottom: ($grid-gutter-width / 1);
 }
 
@@ -15,11 +16,19 @@
 
 .archive-events__filter-control {
   display: block;
-  padding: 5px;
+  padding: 6px 8px;
+  font-size: $font-size--smaller;
   border-bottom: 4px solid $light-color;
+  text-transform: uppercase;
+  color: $muted-color;
+  transition: $duration;
 
   &--active {
-    border-color: #fb8;
+    color: $link-color--hover;
+    // color: $base-color;
+    border-bottom-color: $link-color--hover;
+    // border-bottom-color: $base-color;
+    cursor: default;
   }
 }
 

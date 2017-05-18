@@ -10,78 +10,117 @@
 <body>
   <div class="site-wrapper">
     @@include('blocks/site-header.html')
-    <main class="main page">
-      <h1 class="page__title">Новости компании</h1>
-      <div class="archive-events">
-        <ul class="archive-events__filters-list">
-          <li class="archive-events__filter">
-            <a class="archive-events__filter-control archive-events__filter-control--active" href="#" data-filter="*">Все</a>
-          </li>
-          <li class="archive-events__filter">
-            <a class="archive-events__filter-control" href="#" data-filter="[data-event]">События</a>
-          </li>
-          <li class="archive-events__filter">
-            <a class="archive-events__filter-control" href="#" data-filter="[data-promo]">Акции</a>
-          </li>
-        </ul>
-        <div class="archive-events__list">
-          <article class="archive-events__item" data-promo>
-            <time class="archive-events__date" datetime="2017-05-11">
-              <span class="archive-events__day">11</span>
-              <span class="archive-events__month">мая</span>
-            </time>
-            <div class="archive-events__content">
-              <h3 class="archive-events__caption">
-                <a href="#">
-                  <span class="archive-events__type">Акция.</span>
-                  Спешите тратить бонусы по акции "2000 бонусов при покупке от 1000 рублей"!
-                </a>
-              </h3>
-              <div class="archive-events__text">
-                <p>Далеко-далеко за словесными горами в стране, гласных.</p>
+    <main class="main">
+      <article class="page">
+        <h1 class="page__title">Новости компании</h1>
+        <div class="archive-events">
+          <ul class="archive-events__filters-list">
+            <li class="archive-events__filter">
+              <a class="archive-events__filter-control archive-events__filter-control--active" href="#" data-filter="*">Все</a>
+            </li>
+            <li class="archive-events__filter">
+              <a class="archive-events__filter-control" href="#" data-filter="[data-event]">События</a>
+            </li>
+            <li class="archive-events__filter">
+              <a class="archive-events__filter-control" href="#" data-filter="[data-promo]">Акции</a>
+            </li>
+          </ul>
+          <div class="archive-events__list">
+            <article class="archive-events__item" data-promo>
+              <time class="archive-events__date" datetime="2017-05-11">
+                <span class="archive-events__day">11</span>
+                <span class="archive-events__month">мая</span>
+              </time>
+              <div class="archive-events__content">
+                <h3 class="archive-events__caption">
+                  <a href="one-news.html">
+                    <span class="archive-events__type">Акция.</span>
+                    Спешите тратить бонусы по акции "2000 бонусов при покупке от 1000 рублей"!
+                  </a>
+                </h3>
+                <div class="archive-events__text">
+                  <p>Далеко-далеко за словесными горами в стране, гласных.</p>
+                </div>
+                <a class="archive-events__more-link" href="one-news.html">Подробнее</a>
               </div>
-              <a class="archive-events__more-link" href="#">Подробнее</a>
-            </div>
-          </article>
-          <article class="archive-events__item" data-event>
-            <time class="archive-events__date" datetime="2017-04-25">
-              <span class="archive-events__day">25</span>
-              <span class="archive-events__month">апреля</span>
-            </time>
-            <div class="archive-events__content">
-              <h3 class="archive-events__caption">
-                <a href="#">
-                  <span class="archive-events__type">Новость.</span>
-                  Турнир по теннису «Первенство СК «Красная стрела»
-                </a>
-              </h3>
-              <div class="archive-events__text">
-                <p>Далеко-далеко за словесными горами в стране, гласных.</p>
-                <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Журчит вершину .</p>
+            </article>
+            <article class="archive-events__item" data-event>
+              <time class="archive-events__date" datetime="2017-04-25">
+                <span class="archive-events__day">25</span>
+                <span class="archive-events__month">апреля</span>
+              </time>
+              <div class="archive-events__content">
+                <h3 class="archive-events__caption">
+                  <a href="#">
+                    <span class="archive-events__type">Новость.</span>
+                    Турнир по теннису «Первенство СК «Красная стрела»
+                  </a>
+                </h3>
+                <div class="archive-events__text">
+                  <p>Далеко-далеко за словесными горами в стране, гласных.</p>
+                  <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Журчит вершину .</p>
+                </div>
+                <a class="archive-events__more-link" href="#">Подробнее</a>
               </div>
-              <a class="archive-events__more-link" href="#">Подробнее</a>
-            </div>
-          </article>
-          <article class="archive-events__item" data-promo>
-            <time class="archive-events__date" datetime="2017-05-05">
-              <span class="archive-events__day">05</span>
-              <span class="archive-events__month">мая</span>
-            </time>
-            <div class="archive-events__content">
-              <h3 class="archive-events__caption">
-                <a href="#">
-                  <span class="archive-events__type">Акция.</span>
-                  Подарок за покупку
-                </a>
-              </h3>
-              <div class="archive-events__text">
-                <p>Далеко-далеко за словесными горами в стране, гласных.</p>
+            </article>
+            <article class="archive-events__item" data-event>
+              <time class="archive-events__date" datetime="2017-04-25">
+                <span class="archive-events__day">25</span>
+                <span class="archive-events__month">апреля</span>
+              </time>
+              <div class="archive-events__content">
+                <h3 class="archive-events__caption">
+                  <a href="#">
+                    <span class="archive-events__type">Новость.</span>
+                    Турнир по теннису «Первенство СК «Красная стрела»
+                  </a>
+                </h3>
+                <div class="archive-events__text">
+                  <p>Далеко-далеко за словесными горами в стране, гласных.</p>
+                  <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Журчит вершину .</p>
+                </div>
+                <a class="archive-events__more-link" href="#">Подробнее</a>
               </div>
-              <a class="archive-events__more-link" href="#">Подробнее</a>
-            </div>
-          </article>
+            </article>
+            <article class="archive-events__item" data-promo>
+              <time class="archive-events__date" datetime="2017-05-05">
+                <span class="archive-events__day">05</span>
+                <span class="archive-events__month">мая</span>
+              </time>
+              <div class="archive-events__content">
+                <h3 class="archive-events__caption">
+                  <a href="#">
+                    <span class="archive-events__type">Акция.</span>
+                    Подарок за покупку
+                  </a>
+                </h3>
+                <div class="archive-events__text">
+                  <p>Далеко-далеко за словесными горами в стране, гласных.</p>
+                </div>
+                <a class="archive-events__more-link" href="#">Подробнее</a>
+              </div>
+            </article>
+            <article class="archive-events__item" data-promo>
+              <time class="archive-events__date" datetime="2017-05-05">
+                <span class="archive-events__day">05</span>
+                <span class="archive-events__month">мая</span>
+              </time>
+              <div class="archive-events__content">
+                <h3 class="archive-events__caption">
+                  <a href="#">
+                    <span class="archive-events__type">Акция.</span>
+                    Подарок за покупку
+                  </a>
+                </h3>
+                <div class="archive-events__text">
+                  <p>Далеко-далеко за словесными горами в стране, гласных.</p>
+                </div>
+                <a class="archive-events__more-link" href="#">Подробнее</a>
+              </div>
+            </article>
+          </div>
         </div>
-      </div>
+      </article>
     </main>
     @@include('blocks/site-footer.html')
   </div>
