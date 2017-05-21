@@ -37,11 +37,11 @@ gulp.task('style', function() {
       ])
     )
     .pipe(gulp.dest('build/css/'))
-    .pipe(minify())
-    .pipe(rename({
-      suffix: '-min'
-    }))
-    .pipe(gulp.dest('build/css'))
+    // .pipe(minify())
+    // .pipe(rename({
+    //   suffix: '-min'
+    // }))
+    // .pipe(gulp.dest('build/css'))
     .pipe(browserSync.stream());
 });
 
@@ -115,7 +115,7 @@ gulp.task('build', function(fn) {
     fn);
 });
 
-gulp.task('serve', function() {
+gulp.task('serve', ['style'], function() {
   browserSync.init({
     server: "./build"
   });
@@ -125,6 +125,7 @@ gulp.task('serve', function() {
       gulp.start('style');
     }, 500);
   });
+  gulp.watch('app/scss/**/*.scss', ['style']);
   gulp.watch('app/js/plugins/*.js', ['plugins-js']);
   gulp.watch('app/js/script.js', ['copy-script']);
   gulp.watch(['app/*.html', 'app/blocks/**/*.html'], ['fileinclude']).on('change', browserSync.reload);

@@ -6,7 +6,7 @@
   &:hover,
   &:focus {
     color: $textColor;
-    background-color: mix(#fff, $bgColor, 7%);
+    background-color: mix(#fff, $bgColor, 10%);
     outline: none;
   }
 
@@ -18,33 +18,24 @@
 
 @mixin createButton() {
   display: inline-block;
-  padding: em(13, 20) em(33, 20);
-  border: 2px solid transparent;
+  padding: 10px 18px;
+  border: 1px solid transparent;
   text-align: center;
-  font-family: inherit;
-  font-size: rem(20);
-  font-weight: 700;
+  font-family: $primary-font;
+  font-size: $font-size--small;
+  font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
   line-height: normal;
+  letter-spacing: 0.025em;
   outline: none;
   user-select: none;
   box-sizing: border-box;
   transition: background-color 0.2s, color 0.2s;
   cursor: pointer;
-
-  &--small {
-    font-size: rem(15);
-    padding: em(14, 15) em(25, 15);
-  }
-
 }
 
 .button {
   @include createButton();
-  @include buttonColor($accent-color, $base-color);
-}
-
-.button--dark {
-  @include buttonColor(#2c2929);
+  @include buttonColor($accent-color, $white-color);
 }

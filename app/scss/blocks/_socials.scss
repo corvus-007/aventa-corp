@@ -10,7 +10,7 @@
   margin-right: 0.5em;
   padding: 5px;
   color: $base-color;
-  border: 1px solid;
+  border: 1.5px solid;
   border-radius: 2px;
   transition: color $duration;
 
@@ -20,7 +20,7 @@
 
   &:hover,
   &:focus {
-    filter: brightness(1);
+
   }
 }
 

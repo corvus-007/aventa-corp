@@ -103,6 +103,60 @@ document.addEventListener('DOMContentLoaded', function() {
   /*=====  End of Mmenu  ======*/
 
 
+
+  /*============================
+  =            Tabs            =
+  ============================*/
+
+  $('.tabs').tabslet({
+    active: 2
+  });
+
+  /*=====  End of Tabs  ======*/
+
+
+
+  /*====================================
+  =            Inline popup            =
+  ====================================*/
+
+  $('.js-trigger-inline-popup').magnificPopup({
+    mainClass: 'popup-fade',
+    focus: 'input',
+    removalDelay: 300
+  });
+
+  /*=====  End of Inline popup  ======*/
+
+
+
+  /*==================================
+  =            Input mask            =
+  ==================================*/
+
+  $('input[type="tel"]').mask("+7 (999) 999-99-99", {});
+
+  /*=====  End of Input mask  ======*/
+
+
+
+  /*=========================================
+  =            Vacancy accordion            =
+  =========================================*/
+
+  var vacancy = document.querySelector('.vacancy');
+
+  if (vacancy) {
+    $(vacancy).collapse({
+      query: ".vacancy__item-head"
+    });
+  }
+
+  /*=====  End of Vacancy accordion  ======*/
+
+
+
+
   /*=============================================
   =            Filter archive events            =
   =============================================*/

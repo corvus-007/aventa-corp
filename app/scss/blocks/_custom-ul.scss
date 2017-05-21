@@ -1,27 +1,30 @@
-.custom-ul {
-  $dimensions-marker: 10;
-
+@mixin custom-ul($dimensions-marker: 7) {
   @include clear-list();
 
   margin: 0;
+  margin-bottom: 1em;
   padding: 0;
   letter-spacing: normal;
 
   li {
-    margin-bottom: 0.7em;
+    margin-bottom: 0.6em;
     position: relative;
     padding-left: $dimensions-marker * 1px + 15px;
 
     &::before {
       content: '';
       position: absolute;
-      left: 0;
+      left: 0.4em;
       top: 0.4em;
       width: rem($dimensions-marker);
       height: rem($dimensions-marker);
       box-sizing: border-box;
       border-radius: 50%;
-      border: 2px solid $accent-color;
+      border: 1.5px solid $accent-color;
     }
   }
+}
+
+.custom-ul {
+  @include custom-ul();
 }
