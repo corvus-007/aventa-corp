@@ -7,6 +7,10 @@
   // padding-bottom: ($grid-gutter-width / 2);
   // border-bottom: 1.5px solid $light-color;
   border: 1px solid $light-color;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .vacancy__item-column {

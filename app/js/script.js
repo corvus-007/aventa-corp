@@ -108,9 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
   =            Tabs            =
   ============================*/
 
-  $('.tabs').tabslet({
-    active: 2
-  });
+  $('.tabs').tabslet();
 
   /*=====  End of Tabs  ======*/
 
@@ -153,6 +151,23 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   /*=====  End of Vacancy accordion  ======*/
+
+
+
+  /*==================================================
+  =            Section contacts accordion            =
+  ==================================================*/
+
+  var contactsSectionsList = document.querySelector('.contacts__sections-list');
+
+  if (contactsSectionsList) {
+    $(contactsSectionsList).collapse({
+      query: ".contacts__section-head"
+    });
+  }
+
+  /*=====  End of Section contacts accordion  ======*/
+
 
 
 
