@@ -8,32 +8,16 @@
  *
  */
 
-
-.mobile-menu {
-  text-decoration: none;
-  color: currentColor;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 0.8em;
-}
-
-.mobile-menu__icon {
-
-}
-
-.mobile-menu__text {
-  vertical-align: middle;
-}
-
 .hamburger-menu {
+  align-self: center;
   display: inline-block;
   position: relative;
 
   border: none;
   background: #fff;
   // padding: 0.8em;
-  width: 40px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
   // padding: 5px;
   vertical-align: middle;
   outline: none;
@@ -41,40 +25,46 @@
 
   appearance: none;
   transition: color 0.2s;
-  border-radius: 2px;
+  // border-radius: 2px;
 
   &__item {
     position: absolute;
-    left: 8px;
+    left: 5px;
     // width: 100%;
-    right: 8px;
+    right: 5px;
     height: 2px;
     background-color: currentColor;
-    transform-origin: 0 50%;
+    transform-origin: 0% 50%;
     transition: transform 0.2s;
+    border-radius: 2px;
 
     &--top {
-      top: 8px;
+      top: 6px;
       // Context
       .mm-opening & {
-        transform: rotateZ(45deg) translateY(-2px) translateX(2px);
+        width: 50%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transform: translateY(0) translateX(-2px) rotateZ(-45deg) ;
       }
     }
 
     &--middle {
-      top: 50%;
-      margin-top: -1px;
-      // Context
-      .mm-opening & {
-        transform: scale(0);
-      }
+      top: 0;
+      bottom: 0;
+      margin: auto;
     }
 
     &--bottom {
-      bottom: 8px;
+      bottom: 6px;
       // Context
       .mm-opening & {
-        transform: rotateZ(-45deg) translateY(2px) translateX(2px);
+        width: 50%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transform: translateY(0) translateX(-2px) rotateZ(45deg) ;
       }
     }
   }
@@ -83,12 +73,5 @@
   &:focus {
     outline: none;
     color: #444;
-  }
-
-}
-
-@media (min-width: 768px) {
-  .mobile-menu {
-    display: none;
   }
 }

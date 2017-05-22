@@ -18,9 +18,19 @@
 }
 
 .about-us__title {
+  position: relative;
   margin: 0;
   margin-bottom: 15px;
   text-transform: uppercase;
+
+  &::before {
+    content: "";
+    top: 100%;
+    left: 0;
+    position: absolute;
+    width: 25px;
+    border-bottom: 4px solid $accent-color;
+  }
 }
 
 .about-us__more-link {

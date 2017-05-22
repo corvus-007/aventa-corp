@@ -3,6 +3,7 @@
   padding-top: $grid-gutter-width;
   padding-bottom: $grid-gutter-width;
   font-size: $font-size--small;
+  border-top: 1px solid $muted-color;
 
   @include media-breakpoint-up(md) {
     font-size: $font-size--smaller;

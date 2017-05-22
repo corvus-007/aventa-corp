@@ -6,54 +6,40 @@
   @include clear-list();
 
   display: flex;
-  // flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: ($grid-gutter-width / 1);
+  user-select: none;
 }
 
 .tabs__menu-item {
-  text-transform: uppercase;
+  font-weight: 500;
   font-size: $font-size--smaller;
-  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
 
   @media (max-width: $md-width - 1) {
     flex-grow: 1;
-
   }
 }
 
 .tabs__menu-link {
-  position: relative;
-  top: 1px;
   display: block;
-  padding: 10px 18px;
-  text-align: center;
-  overflow: hidden;
-  color: currentColor;
-  transition: background-color 0.22s;
-  user-select: none;
-  border: 1px solid transparent;
-
-  &:hover,
-  &:focus {
-    color: currentColor;
-  }
-
-  &:hover {
-    background-color: lighten($light-color, 1%);
-  }
+  padding: 6px 8px;
+  border-bottom: 4px solid $light-color;
+  text-transform: uppercase;
+  color: $muted-color;
+  transition: $duration;
 }
 
 .active .tabs__menu-link {
-  background-color: #fff;
+  color: $link-color;
+  border-bottom-color: $link-color;
   cursor: default;
-  pointer-events: none;
-  border-color: $light-color;
-  border-bottom-color: #fff;
 }
 
 .tabs__pane {
-  padding: ($grid-gutter-width / 2);
-  border: 1px solid $light-color;
-  background-color: #fff;
+  padding-top: ($grid-gutter-width / 2);
+  padding-bottom: ($grid-gutter-width / 2);
 }
 
 .tabs__pane > :first-child {

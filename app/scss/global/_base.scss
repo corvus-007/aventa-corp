@@ -83,7 +83,7 @@ img {
 }
 
 .hr {
-  @include make-container-fluid();
+  // @include make-container-fluid();
 
   margin-top: ($grid-gutter-width * 1.5);
   margin-bottom: ($grid-gutter-width * 1.5);

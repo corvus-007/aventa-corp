@@ -146,6 +146,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (vacancy) {
     $(vacancy).collapse({
+      open: function() {
+        this.slideDown(250);
+      },
+      close: function() {
+        this.slideUp(250);
+      },
       query: ".vacancy__item-head"
     });
   }
@@ -162,13 +168,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (contactsSectionsList) {
     $(contactsSectionsList).collapse({
-      query: ".contacts__section-head"
+      open: function() {
+        this.slideDown(250);
+      },
+      close: function() {
+        this.slideUp(250);
+      },
+      query: ".contacts__section-head",
+      accordion: true,
     });
   }
 
   /*=====  End of Section contacts accordion  ======*/
-
-
 
 
 

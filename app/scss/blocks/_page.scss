@@ -5,8 +5,18 @@
 }
 
 .page__title {
+  position: relative;
   margin-bottom: $grid-gutter-width;
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 0.03em;
+
+  &::before {
+    content: "";
+    top: 100%;
+    left: 0;
+    position: absolute;
+    width: 25px;
+    border-bottom: 4px solid $accent-color;
+  }
 }

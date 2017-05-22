@@ -6,28 +6,33 @@
   @include clear-list();
 
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: ($grid-gutter-width / 1);
+  user-select: none;
 }
 
 .archive-events__filter {
+  font-weight: 500;
+  font-size: $font-size--smaller;
+  text-transform: uppercase;
+  text-align: center;
 
+  @media (max-width: $md-width - 1) {
+    flex-grow: 1;
+  }
 }
 
 .archive-events__filter-control {
   display: block;
   padding: 6px 8px;
-  font-size: $font-size--smaller;
   border-bottom: 4px solid $light-color;
   text-transform: uppercase;
   color: $muted-color;
   transition: $duration;
 
   &--active {
-    color: $link-color--hover;
-    // color: $base-color;
-    border-bottom-color: $link-color--hover;
-    // border-bottom-color: $base-color;
+    color: $link-color;
+    border-bottom-color: $link-color;
     cursor: default;
   }
 }

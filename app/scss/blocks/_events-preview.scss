@@ -19,9 +19,19 @@
 }
 
 .events-preview__title {
+  position: relative;
   margin: 0;
   text-transform: uppercase;
   flex-grow: 1;
+
+  &::before {
+    content: "";
+    top: 100%;
+    left: 0;
+    position: absolute;
+    width: 25px;
+    border-bottom: 4px solid $accent-color;
+  }
 }
 
 .events-preview__all-link {
