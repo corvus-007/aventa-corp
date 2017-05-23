@@ -160,26 +160,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-  /*==================================================
-  =            Section contacts accordion            =
-  ==================================================*/
-
-  var contactsSectionsList = document.querySelector('.contacts__sections-list');
-
-  if (contactsSectionsList) {
-    $(contactsSectionsList).collapse({
-      open: function() {
-        this.slideDown(250);
-      },
-      close: function() {
-        this.slideUp(250);
-      },
-      query: ".contacts__section-head",
-      accordion: true,
-    });
-  }
-
-  /*=====  End of Section contacts accordion  ======*/
 
 
 
@@ -232,3 +212,76 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 });
+
+
+
+/*==================================================
+=            Section contacts accordion            =
+==================================================*/
+
+var contactsSectionsList = document.querySelector('.contacts__sections-list');
+
+if (contactsSectionsList) {
+  $(contactsSectionsList).collapse({
+    open: function() {
+      this.slideDown(250);
+    },
+    close: function() {
+      this.slideUp(250);
+    },
+    query: ".contacts__section-head",
+    accordion: true,
+  });
+
+  $(contactsSectionsList).bind('opened', function(e, section) {
+    console.log(section.$summary.data('city'));
+    if (section.$summary) {
+      contactsMap.setCenter(section.$summary.data('center-map'));
+    }
+  });
+
+  ymaps.ready(init);
+  var contactsMap = null;
+
+  function init() {
+    var centerBryansk = [53.26419, 34.33363];
+    var centerOrel = [52.9770, 36.0682];
+    var centerSmolensk = [54.7417, 32.0858];
+
+    contactsMap = new ymaps.Map('contacts-map', {
+      center: centerBryansk,
+      zoom: 12,
+      controls: []
+    });
+
+    var bryansk1 = new ymaps.Placemark([53.2984, 34.3145], {
+      hintContent: 'г. Брянск, ул. Бурова, д. 8',
+    }, {
+      preset: 'islands#darkOrangeDotIcon'
+    });
+
+    var bryansk2 = new ymaps.Placemark([53.2271, 34.3212], {
+      hintContent: 'г. Брянск, пр-т. Ст. Димитрова, д. 67'
+    });
+
+    var bryansk3 = new ymaps.Placemark([53.2733, 34.3467], {
+      hintContent: 'г. Брянск, ул. Степная, д. 12'
+    });
+
+    var orel1 = new ymaps.Placemark([52.9770, 36.0682], {
+      hintContent: 'г. Орёл, ул. Красноармейская, д. 1'
+    });
+
+    var smolensk1 = new ymaps.Placemark([54.7417, 32.0858], {
+      hintContent: 'г. Смоленск, пос. Тихвинка, д. 71'
+    });
+
+    contactsMap.geoObjects.add(bryansk1);
+    contactsMap.geoObjects.add(bryansk2);
+    contactsMap.geoObjects.add(bryansk3);
+    contactsMap.geoObjects.add(orel1);
+    contactsMap.geoObjects.add(smolensk1);
+  }
+}
+
+/*=====  End of Section contacts accordion  ======*/

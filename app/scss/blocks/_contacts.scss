@@ -1,13 +1,31 @@
 .contacts {
 
+  @include media-breakpoint-up(md) {
+    display: flex;
+  }
+}
+
+.contacts__map-wrapper {
+
+
+  @include media-breakpoint-up(md) {
+    width: 50%;
+  }
 }
 
 .contacts__map {
-
+  height: 450px;
+  background-color: #4bd;
 }
 
 .contacts__sections-list {
 
+
+  @include media-breakpoint-up(md) {
+    padding-left: $grid-gutter-width;
+    width: 50%;
+    box-sizing: border-box;
+  }
 }
 
 .contacts__section {
@@ -15,7 +33,16 @@
 }
 
 .contacts__section-head {
+  a {
+    color: $base-color;
+    transition: color $duration;
+  }
+}
 
+.open {
+  a {
+    color: $accent-color;
+  }
 }
 
 .contacts__section-caption {

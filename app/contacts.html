@@ -6,18 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Контактная информация - Авента</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
   <div class="site-wrapper">
     @@include('blocks/site-header.html')
+    @@include('blocks/advertising.html')
     <main class="main">
       <article class="page">
         <h1 class="page__title">Контактная информация</h1>
         <div class="contacts">
-          <div class="contacts__map"></div>
+          <div class="contacts__map-wrapper">
+            <div class="contacts__map" id="contacts-map"></div>
+          </div>
           <div class="contacts__sections-list">
             <div class="contacts__section">
-              <div class="contacts__section-head open">
+              <div class="contacts__section-head open" data-center-map="[53.26419, 34.33363]">
                 <h2 class="contacts__section-caption">Брянск</h2>
               </div>
               <div class="contacts__section-body">
@@ -59,39 +63,17 @@
               </div>
             </div>
             <div class="contacts__section">
-              <div class="contacts__section-head">
+              <div class="contacts__section-head" data-center-map="[52.9770, 36.0682]">
                 <h2 class="contacts__section-caption">Орел</h2>
               </div>
               <div class="contacts__section-body">
                 <div class="contacts__info-group">
                   <li class="contacts__info">
                     <p class="contacts__info-item">
-                      г. Орел, ул. Бурова, д. 8
+                      г. Орёл, ул. Красноармейская, д. 1
                     </p>
                     <p class="contacts__info-item">
                       (4832) 220-380 доб. 1,2
-                    </p>
-                    <p class="contacts__info-item">
-                      Режим работы
-                    </p>
-                  </li>
-                  <li class="contacts__info">
-                    <p class="contacts__info-item">
-                      г. Орел, пр-т. Ст. Димитрова, д. 67
-                    </p>
-                    <p class="contacts__info-item">
-                      (4832) 220-380 доб. 3
-                    </p>
-                    <p class="contacts__info-item">
-                      Режим работы
-                    </p>
-                  </li>
-                  <li class="contacts__info">
-                    <p class="contacts__info-item">
-                      г. Орел, ул. Степная, д. 12
-                    </p>
-                    <p class="contacts__info-item">
-                      (4832) 220-380 доб. 4
                     </p>
                     <p class="contacts__info-item">
                       Режим работы
@@ -101,39 +83,17 @@
               </div>
             </div>
             <div class="contacts__section">
-              <div class="contacts__section-head">
+              <div class="contacts__section-head" data-center-map="[54.7417, 32.0858]">
                 <h2 class="contacts__section-caption">Смоленск</h2>
               </div>
               <div class="contacts__section-body">
                 <div class="contacts__info-group">
                   <li class="contacts__info">
                     <p class="contacts__info-item">
-                      г. Смоленск, ул. Бурова, д. 8
+                      г. Смоленск, пос. Тихвинка, д. 71
                     </p>
                     <p class="contacts__info-item">
                       (4832) 220-380 доб. 1,2
-                    </p>
-                    <p class="contacts__info-item">
-                      Режим работы
-                    </p>
-                  </li>
-                  <li class="contacts__info">
-                    <p class="contacts__info-item">
-                      г. Смоленск, пр-т. Ст. Димитрова, д. 67
-                    </p>
-                    <p class="contacts__info-item">
-                      (4832) 220-380 доб. 3
-                    </p>
-                    <p class="contacts__info-item">
-                      Режим работы
-                    </p>
-                  </li>
-                  <li class="contacts__info">
-                    <p class="contacts__info-item">
-                      г. Смоленск, ул. Степная, д. 12
-                    </p>
-                    <p class="contacts__info-item">
-                      (4832) 220-380 доб. 4
                     </p>
                     <p class="contacts__info-item">
                       Режим работы
