@@ -34,8 +34,13 @@ document.addEventListener('DOMContentLoaded', function() {
   var mainNavItem = null;
 
 
+
   Array.prototype.forEach.call(mainNavLinks, function(item) {
     mainNavItem = item.parentElement;
+
+    if (pageURL === '/') {
+      return;
+    }
 
     if (~item.href.indexOf(pageURL)) {
       mainNavItem.classList.add('main-nav__item--active');
@@ -234,7 +239,6 @@ if (contactsSectionsList) {
   });
 
   $(contactsSectionsList).bind('opened', function(e, section) {
-    console.log(section.$summary.data('city'));
     if (section.$summary) {
       contactsMap.setCenter(section.$summary.data('center-map'));
     }
