@@ -165,9 +165,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
-
   /*=============================================
   =            Filter archive events            =
   =============================================*/
@@ -216,9 +213,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
 });
 
 
+/*=======================================
+=            Fixed accordion            =
+=======================================*/
+
+setTimeout(function() {
+  calcHeightFixedAccordion();
+}, 100);
+
+$(".fixed-accordion").on("click", ".fixed-accordion__caption", function(event) {
+  $(this).closest(".fixed-accordion").toggleClass("fixed-accordion--opened");
+  $(this).next(".fixed-accordion__body").slideToggle();
+});
+
+function calcHeightFixedAccordion() {
+  $(".fixed-accordion").height(function() {
+    return $(this).find(".fixed-accordion__caption").outerHeight();
+  });
+}
+
+
+/*=====  End of Fixed accordion  ======*/
 
 /*==================================================
 =            Section contacts accordion            =
@@ -239,8 +259,12 @@ if (contactsSectionsList) {
   });
 
   $(contactsSectionsList).bind('opened', function(e, section) {
+    setTimeout(function() {
+      calcHeightFixedAccordion();
+    }, 100);
     if (section.$summary) {
-      contactsMap.setCenter(section.$summary.data('center-map'));
+      // contactsMap.setCenter(section.$summary.data('center-map'));
+      contactsMap.panTo(section.$summary.data('center-map'));
     }
   });
 
@@ -255,7 +279,8 @@ if (contactsSectionsList) {
     contactsMap = new ymaps.Map('contacts-map', {
       center: centerBryansk,
       zoom: 12,
-      controls: []
+      // controls: []
+      controls: ["zoomControl", "fullscreenControl"]
     });
 
     var bryansk1 = new ymaps.Placemark([53.2984, 34.3145], {

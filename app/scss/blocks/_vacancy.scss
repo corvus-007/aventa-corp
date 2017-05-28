@@ -39,7 +39,7 @@
     margin: auto;
     width: 24px;
     height: 24px;
-    background: url("../../img/arrow-down.svg") no-repeat 50% / contain;
+    background: url("../img/arrow-down.svg") no-repeat 50% / contain;
     transition: $duration;
   }
 
@@ -67,7 +67,7 @@
 
 
   &::before {
-    transform: rotate(-180deg)
+    transform: rotate(-180deg);
   }
 
   a {

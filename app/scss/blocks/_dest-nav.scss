@@ -46,23 +46,23 @@ $dest-nav-gutter: 10px;
   }
 
   &--offices::after {
-    background-image: url("../../img/dest-nav/offices.jpg");
+    background-image: url("../img/dest-nav/offices.jpg");
   }
 
   &--a-system::after {
-    background-image: url("../../img/dest-nav/a-system.jpg");
+    background-image: url("../img/dest-nav/a-system.jpg");
   }
 
   &--e-shop::after {
-    background-image: url("../../img/dest-nav/e-shop.jpg");
+    background-image: url("../img/dest-nav/e-shop.jpg");
   }
 
   &--electroboard::after {
-    background-image: url("../../img/dest-nav/electroboard.jpg");
+    background-image: url("../img/dest-nav/electroboard.jpg");
   }
 
   &--electrical-work::after {
-    background-image: url("../../img/dest-nav/electrical-work.jpg");
+    background-image: url("../img/dest-nav/electrical-work.jpg");
   }
 
   @include media-breakpoint-up(sm) {
