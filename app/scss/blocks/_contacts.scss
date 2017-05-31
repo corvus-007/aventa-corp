@@ -3,6 +3,8 @@
   @include media-breakpoint-up(md) {
     display: flex;
     align-items: flex-start;
+    padding: 5px;
+    border: 1.5px solid $light-color;
   }
 }
 
@@ -22,7 +24,7 @@
 }
 
 .contacts__map {
-  min-height: 450px;
+  height: 450px;
 }
 
 .contacts__sections-list {
@@ -43,10 +45,14 @@
 }
 
 .contacts__section {
-
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $light-color;
 }
 
 .contacts__section-head {
+  text-transform: uppercase;
+
   a {
     color: $base-color;
     transition: color $duration;
