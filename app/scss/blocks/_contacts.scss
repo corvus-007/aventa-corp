@@ -24,7 +24,7 @@
 }
 
 .contacts__map {
-  height: 450px;
+  height: 500px;
 }
 
 .contacts__sections-list {
@@ -67,6 +67,7 @@
 
 .contacts__section-caption {
   margin: 0;
+  font-size: $font-size--largest;
 }
 
 .contacts__section-body {
@@ -91,6 +92,11 @@
 
 .contacts__info-item {
 
+}
+
+.contacts__work-time {
+  font-size: rem($font-size--smaller);
+  color: #7c868d;
 }
 
 .contacts__info-units {
