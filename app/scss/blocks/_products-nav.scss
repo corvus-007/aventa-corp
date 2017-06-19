@@ -1,0 +1,25 @@
+.products-nav {
+  @include clear-list();
+
+  display: flex;
+  margin-bottom: ($grid-gutter-width / 1);
+
+  li {
+    margin-right: 15px;
+  }
+
+  a {
+    color: #7c868d;
+    transition: color $duration;
+    font-weight: 300;
+
+    &:hover,
+    &:focus {
+      color: $base-color;
+    }
+  }
+
+  .current a {
+    color: $base-color;
+  }
+}

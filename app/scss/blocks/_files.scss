@@ -1,0 +1,35 @@
+.files {
+
+}
+
+.files__list {
+  @include clear-list();
+  @include make-row();
+}
+
+.files__item {
+  margin-bottom: ($grid-gutter-width / 1);
+}
+
+.files__item-wraplink {
+  display: block;
+  text-decoration: none;
+  border: none;
+  color: $base-color;
+  transition: color $duration;
+}
+
+.files__item-image-wrapper {
+  margin-bottom: 15px;
+  border: 2px solid $muted-color;
+}
+
+.files__item-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.files__item-name {
+  display: block;
+  font-size: rem($font-size--small);
+}

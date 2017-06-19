@@ -13,6 +13,7 @@
 // Vendors
 @import "vendors/slick";
 @import "vendors/magnific-popup";
+@import "vendors/jquery.fancybox";
 @import "vendors/jquery.mmenu";
 
 // Blocks
@@ -28,13 +29,19 @@
 @import "blocks/main-nav";
 @import "blocks/hamburger-menu";
 @import "blocks/index-slider";
+@import "blocks/base-slider";
+@import "blocks/production-common-slider";
 @import "blocks/dest-nav";
+@import "blocks/products-nav";
 @import "blocks/about-us";
 @import "blocks/about-features";
 @import "blocks/events-preview";
 @import "blocks/archive-events";
 @import "blocks/event";
 @import "blocks/page";
+@import "blocks/certs";
+@import "blocks/files";
+@import "blocks/products-preview";
 @import "blocks/partners";
 @import "blocks/vacancy";
 @import "blocks/contacts";

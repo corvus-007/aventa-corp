@@ -1,0 +1,30 @@
+.certs {
+
+}
+
+.certs__list {
+  @include clear-list();
+  @include make-row();
+}
+
+.certs__item {
+  margin-bottom: ($grid-gutter-width / 1);
+
+  a {
+    display: block;
+    text-decoration: none;
+    border: none;
+    box-shadow: $box-shadow;
+    transition: box-shadow $duration;
+
+    &:hover,
+    &:focus {
+      box-shadow: $box-shadow--hover;
+    }
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}

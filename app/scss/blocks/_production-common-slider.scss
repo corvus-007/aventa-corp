@@ -1,0 +1,23 @@
+.production-common-slider {
+  border: 1.5px solid $light-color;
+
+  .slick-dots {
+    button{
+      border-color: $light-color;
+    }
+
+    .slick-active button {
+      background: $light-color;
+    }
+  }
+}
+
+.production-common-slider__item {
+  padding: $grid-gutter-width;
+
+  img {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

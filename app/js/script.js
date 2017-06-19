@@ -67,6 +67,22 @@ document.addEventListener('DOMContentLoaded', function() {
   /*=====  End of Index slider  ======*/
 
 
+  /*==============================
+  =            Slider            =
+  ==============================*/
+
+  if ($('.production-common-slider').length) {
+    $('.production-common-slider').slick({
+      accessibility: false,
+      arrows: false,
+      dots: true
+    });
+  }
+
+  /*=====  End of Slider  ======*/
+
+
+
   /*================================
   =            Dest nav            =
   ================================*/
