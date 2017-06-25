@@ -27,7 +27,7 @@ function getHashFilter() {
 }
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
   var mainNavLinks = document.querySelectorAll('.main-nav__link');
   var pageURL = location.pathname;
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-  Array.prototype.forEach.call(mainNavLinks, function(item) {
+  Array.prototype.forEach.call(mainNavLinks, function (item) {
     mainNavItem = item.parentElement;
 
     if (pageURL === '/') {
@@ -67,10 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
   /*=====  End of Index slider  ======*/
 
 
-  /*==============================
-  =            Slider            =
-  ==============================*/
-
+  // Production common slider
   if ($('.production-common-slider').length) {
     $('.production-common-slider').slick({
       accessibility: false,
@@ -79,8 +76,33 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  /*=====  End of Slider  ======*/
 
+  // Gallery slider
+  $('.gallery-slider').slick({
+    accessibility: false,
+    infinite: false,
+    slidesToShow: 4,
+    responsive: [{
+      breakpoint: 770,
+      settings: {
+        slidesToShow: 3
+      }
+    }, {
+      breakpoint: 567,
+      settings: {
+        slidesToShow: 1,
+        arrows: false
+      }
+    }]
+  });
+
+  $('.gallery-slider [data-fancybox]').fancybox({
+    transitionEffect: 'slide',
+    loop: true,
+    afterShow: function (instance, slide) {
+      $('.gallery-slider').slick('slickGoTo', instance.currIndex - 1);
+    }
+  });
 
 
   /*================================
@@ -90,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var destNav = document.querySelector('.dest-nav');
 
   if (destNav) {
-    setTimeout(function() {
+    setTimeout(function () {
       setMaxHeight('.dest-nav__item-title')
     }, 100);
 
@@ -167,10 +189,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (vacancy) {
     $(vacancy).collapse({
-      open: function() {
+      open: function () {
         this.slideDown(250);
       },
-      close: function() {
+      close: function () {
         this.slideUp(250);
       },
       query: ".vacancy__item-head"
@@ -192,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
       layoutMode: 'vertical'
     });
 
-    var $filters = $('.archive-events__filter').on('click', 'a', function(event) {
+    var $filters = $('.archive-events__filter').on('click', 'a', function (event) {
       event.preventDefault();
       var filterAttr = $(this).attr('data-filter');
       // set filter in hash
@@ -238,17 +260,17 @@ document.addEventListener('DOMContentLoaded', function() {
 =            Fixed accordion            =
 =======================================*/
 
-setTimeout(function() {
+setTimeout(function () {
   calcHeightFixedAccordion();
 }, 100);
 
-$(".fixed-accordion").on("click", ".fixed-accordion__caption", function(event) {
+$(".fixed-accordion").on("click", ".fixed-accordion__caption", function (event) {
   $(this).closest(".fixed-accordion").toggleClass("fixed-accordion--opened");
   $(this).next(".fixed-accordion__body").slideToggle();
 });
 
 function calcHeightFixedAccordion() {
-  $(".fixed-accordion").height(function() {
+  $(".fixed-accordion").height(function () {
     return $(this).find(".fixed-accordion__caption").outerHeight();
   });
 }
@@ -264,18 +286,18 @@ var contactsSectionsList = document.querySelector('.contacts__sections-list');
 
 if (contactsSectionsList) {
   $(contactsSectionsList).collapse({
-    open: function() {
+    open: function () {
       this.slideDown(250);
     },
-    close: function() {
+    close: function () {
       this.slideUp(250);
     },
     query: ".contacts__section-head",
     accordion: true,
   });
 
-  $(contactsSectionsList).bind('opened', function(e, section) {
-    setTimeout(function() {
+  $(contactsSectionsList).bind('opened', function (e, section) {
+    setTimeout(function () {
       calcHeightFixedAccordion();
     }, 100);
     if (section.$summary) {
