@@ -1,0 +1,22 @@
+.report-slider {
+
+}
+
+.report-slider__item {
+  a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border: none;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin-left: ($grid-gutter-width / 5);
+    margin-right: ($grid-gutter-width / 5);
+  }
+}

@@ -104,6 +104,43 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  // Report
+  var reportSlider = document.querySelector('.report-slider');
+
+  if (reportSlider) {
+    var reportImageOriginWrapper = document.querySelector('.report__image-origin-wrapper');
+    var reportImageOrigin = document.querySelector('.report__image-origin');
+    reportImageOrigin.addEventListener('load', function (event) {
+      setTimeout(function () {
+        reportImageOriginWrapper.classList.remove('report__image-origin-wrapper--loading');
+      }, 2500);
+    });
+    reportImageOrigin.src = reportSlider.querySelector('a').href;
+  }
+  $(reportSlider).on('click', 'a', function (event) {
+    event.preventDefault();
+    reportImageOrigin.src = this.href;
+    reportImageOriginWrapper.classList.add('report__image-origin-wrapper--loading');
+  });
+
+  $(reportSlider).slick({
+    accessibility: false,
+    infinite: false,
+    slidesToShow: 5,
+    responsive: [{
+      breakpoint: 770,
+      settings: {
+        slidesToShow: 3
+      }
+    }, {
+      breakpoint: 567,
+      settings: {
+        slidesToShow: 1,
+        arrows: false
+      }
+    }]
+  });
+
 
   /*================================
   =            Dest nav            =
@@ -168,6 +205,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   /*=====  End of Inline popup  ======*/
+
+
 
 
 
@@ -248,10 +287,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /*=====  End of Filter archive events  ======*/
-
-
-
-
 
 });
 

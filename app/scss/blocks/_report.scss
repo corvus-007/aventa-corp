@@ -1,0 +1,44 @@
+.report {
+
+}
+
+.report__image-origin-wrapper {
+  position: relative;
+  margin-bottom: rem($grid-gutter-width);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 64px;
+    height: 64px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0;
+    transition: $duration;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    animation: loader-report-image 0.5s infinite alternate;
+  }
+
+  &--loading {
+    &::before {
+      opacity: 0.5;
+    }
+  }
+}
+
+@keyframes loader-report-image {
+  100% {
+    transform: scale(2);
+  }
+}
+
+.report__image-origin {
+
+}
