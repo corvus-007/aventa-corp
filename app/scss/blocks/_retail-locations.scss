@@ -1,0 +1,29 @@
+.retail-locations {
+
+}
+
+.retail-locations__list {
+}
+
+.retail-locations__item {
+  margin-bottom: 2rem;
+}
+
+.retail-locations__map {
+  min-height: 300px;
+  margin-bottom: 1rem;
+}
+
+.retail-locations__address {
+  position: relative;
+  padding-left: 2rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    background: url("../../img/icon-location--fill.svg") no-repeat center / contain;
+  }
+}

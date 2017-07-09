@@ -190,6 +190,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   $('.tabs').tabslet();
 
+
+  $('.tabs').on('_after', function () {
+    $('.gallery-slider:visible').slick('refresh');
+  });
+
   /*=====  End of Tabs  ======*/
 
 
@@ -310,8 +315,121 @@ function calcHeightFixedAccordion() {
   });
 }
 
-
 /*=====  End of Fixed accordion  ======*/
+
+
+
+/*========================================
+=            Retail locations            =
+========================================*/
+
+ymaps.ready(initRetailMap);
+
+function initRetailMap() {
+  // г. Брянск, ул. Бурова, д. 8
+  var map1 = new ymaps.Map("retail-map-1", {
+    center: [53.2984, 34.3145],
+    zoom: 16,
+    controls: []
+  });
+
+  mapMarker1 = new ymaps.Placemark([53.2984, 34.3145], {
+    hintContent: "г. Брянск, ул. Бурова, д. 8"
+  }, {
+    preset: 'islands#darkOrangeDotIcon'
+  });
+
+  map1.behaviors.disable(['scrollZoom']);
+  map1.geoObjects.add(mapMarker1);
+
+  // г. Брянск, пр-т. Ст. Димитрова, д. 67
+  var map2 = new ymaps.Map("retail-map-2", {
+    center: [53.2271, 34.3212],
+    zoom: 16,
+    controls: []
+  });
+
+  mapMarker2 = new ymaps.Placemark([53.2271, 34.3212], {
+    hintContent: "г. Брянск, пр-т. Ст. Димитрова, д. 67"
+  }, {});
+
+  map2.behaviors.disable(['scrollZoom']);
+  map2.geoObjects.add(mapMarker2);
+
+  // г. Брянск, ул. Степная, д. 12
+  var map3 = new ymaps.Map("retail-map-3", {
+    center: [53.2733, 34.3467],
+    zoom: 16,
+    controls: []
+  });
+
+  mapMarker3 = new ymaps.Placemark([53.2733, 34.3467], {
+    hintContent: "г. Брянск, ул. Степная, д. 12"
+  }, {});
+
+  map3.behaviors.disable(['scrollZoom']);
+  map3.geoObjects.add(mapMarker3);
+}
+
+/*=====  End of Retail locations  ======*/
+
+
+
+/*===========================================
+=            Wholesale locations            =
+===========================================*/
+
+ymaps.ready(initWholesalelMap);
+
+function initWholesalelMap() {
+  // г. Брянск, ул. Бурова, д. 8
+  var map1 = new ymaps.Map("wholesale-map-1", {
+    center: [53.2984, 34.3145],
+    zoom: 16,
+    controls: []
+  });
+
+  mapMarker1 = new ymaps.Placemark([53.2984, 34.3145], {
+    hintContent: "г. Брянск, ул. Бурова, д. 8"
+  }, {
+    preset: 'islands#darkOrangeDotIcon'
+  });
+
+  map1.behaviors.disable(['scrollZoom']);
+  map1.geoObjects.add(mapMarker1);
+
+  // г. Брянск, пр-т. Ст. Димитрова, д. 67
+  var map2 = new ymaps.Map("wholesale-map-2", {
+    center: [53.2271, 34.3212],
+    zoom: 16,
+    controls: []
+  });
+
+  mapMarker2 = new ymaps.Placemark([53.2271, 34.3212], {
+    hintContent: "г. Брянск, пр-т. Ст. Димитрова, д. 67"
+  }, {});
+
+  map2.behaviors.disable(['scrollZoom']);
+  map2.geoObjects.add(mapMarker2);
+
+  // г. Брянск, ул. Степная, д. 12
+  var map3 = new ymaps.Map("wholesale-map-3", {
+    center: [53.2733, 34.3467],
+    zoom: 16,
+    controls: []
+  });
+
+  mapMarker3 = new ymaps.Placemark([53.2733, 34.3467], {
+    hintContent: "г. Брянск, ул. Степная, д. 12"
+  }, {});
+
+  map3.behaviors.disable(['scrollZoom']);
+  map3.geoObjects.add(mapMarker3);
+}
+
+/*=====  End of Wholesale locations  ======*/
+
+
 
 /*==================================================
 =            Section contacts accordion            =

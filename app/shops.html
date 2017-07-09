@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Магазины, офисы продаж - Авента</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+  <div class="site-wrapper">
+    @@include('blocks/site-header.html')
+    @@include('blocks/advertising.html')
+    <main class="main">
+      <article class="page">
+        <h1 class="page__title">Магазины, офисы продаж</h1>
+
+        <div class="tabs">
+          <ul class='tabs__menu'>
+            <li class="tabs__menu-item">
+              <a class="tabs__menu-link" href="#tab-retail">Розничные магазины</a>
+            </li>
+            <li class="tabs__menu-item">
+              <a class="tabs__menu-link" href="#tab-wholesale">Оптовые продажи</a>
+            </li>
+          </ul>
+          <div class="tabs__pane" id='tab-retail'>
+            <h2 class="visuallyhidden">Розничные магазины</h2>
+            <p>Продажа электроматериалов в розницу — одно из ключевых направлений деятельности компании. В магазинах «Авента» представлен широкий выбор электроустановочных изделий, кабельно-проводниковой продукции, светотехнической продукции, высоковольтного, низковольтного, электрощитового оборудования — всего более 16 000 наименований товаров.</p>
+            <p>В настоящий момент «Авента» представлена 3 магазинами, расположенными в Бежицком и Советском районе г. Брянска. В каждом из которых можно получить квалифицированную консультацию и приобрести необходимый товар, как по наличному, так и по безналичному расчету. Магазины представлены в формате самообслуживания и магазина-склада.</p>
+
+            <div class="retail-locations">
+              <div class="retail-locations__list row">
+                <div class="retail-locations__item col-12 col-md-4">
+                  <div class="retail-locations__map" id="retail-map-1"></div>
+                  <div class="retail-locations__address">
+                    <div class="contacts__info">
+                      <p class="contacts__info-item">
+                        г. Брянск, ул. Бурова, д. 8
+                      </p>
+                      <p class="contacts__info-item">
+                        (4832) 220-380 доб. 1,2
+                      </p>
+                      <p class="contacts__info-item contacts__work-time">
+                        <b>Режим работы:</b> <br />
+                        <b>ПН-ПТ</b> с 8:30 до 17:30;
+                        <b>СБ</b> с 9:00 до 17:00; <br />
+                        <b>ВС</b> с 9:00 до 15:00 (с частными лицами)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="retail-locations__item col-12 col-md-4">
+                  <div class="retail-locations__map" id="retail-map-2"></div>
+                  <div class="retail-locations__address">
+                    <div class="contacts__info">
+                      <p class="contacts__info-item">
+                        г. Брянск, пр-т. Ст. Димитрова, д. 67
+                      </p>
+                      <p class="contacts__info-item">
+                        (4832) 220-380 доб. 3
+                      </p>
+                      <p class="contacts__info-item contacts__work-time">
+                        <b>Режим работы:</b> <br />
+                        <b>ПН-ПТ</b> с 9:00 до 19:00;
+                        <b>СБ</b> с 9:00 до 17:00; <br />
+                        <b>ВС</b> с 10:00 до 17:00
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="retail-locations__item col-12 col-md-4">
+                  <div class="retail-locations__map" id="retail-map-3"></div>
+                  <div class="retail-locations__address">
+                    <div class="contacts__info">
+                      <p class="contacts__info-item">
+                        г. Брянск, ул. Степная, д. 12
+                      </p>
+                      <p class="contacts__info-item">
+                        (4832) 220-380 доб. 4
+                      </p>
+                      <p class="contacts__info-item contacts__work-time">
+                        <b>Режим работы:</b> <br />
+                        <b>ПН-ПТ</b> с 9:00 до 19:00;
+                        <b>СБ</b> с 9:00 до 17:00; <br />
+                        <b>ВС</b> с 10:00 до 17:00
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p><b>Магазины «Авента» — это:</b></p>
+            <ul>
+             <li>Широкий ассортимент продукции.</li>
+              <li>Оптимальное соотношение цены и качаства продукции.</li>
+              <li>Индивидуальный подход к каждому клиенту.</li>
+              <li>Программа лояльности для постоянных клиентов.</li>
+              <li>Наличие товара на складе.</li>
+              <li>Профессиональная консультация в подборе товара.</li>
+            </ul>
+            <div class="gallery-slider base-slider">
+              <div class="gallery-slider__item">
+                <a data-fancybox="retail" data-type="image" href="https://images.unsplash.com/photo-1498166056926-88805255732e?dpr=1.25&auto=format&fit=crop&w=1200&h=800&q=90&cs=tinysrgb&crop=&bg="><img src="https://images.unsplash.com/photo-1498166056926-88805255732e?dpr=1.25&auto=format&fit=crop&w=267&h=176&q=90&cs=tinysrgb&crop=&bg=" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="retail" data-type="image" href="https://images.unsplash.com/photo-1498124987742-5a76f6eaa176?dpr=1.25&auto=format&fit=crop&w=1200&h=800&q=90&cs=tinysrgb&crop=&bg="><img src="https://images.unsplash.com/photo-1498124987742-5a76f6eaa176?dpr=1.25&auto=format&fit=crop&w=267&h=176&q=90&cs=tinysrgb&crop=&bg=" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="retail" data-type="image" href="https://images.unsplash.com/photo-1497993787748-d538bf0a8a3b?dpr=1.25&auto=format&fit=crop&w=1200&h=800&q=90&cs=tinysrgb&crop=&bg="><img src="https://images.unsplash.com/photo-1497993787748-d538bf0a8a3b?dpr=1.25&auto=format&fit=crop&w=267&h=176&q=90&cs=tinysrgb&crop=&bg=" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="retail" data-type="image" href="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?dpr=1.25&auto=format&fit=crop&w=1200&h=800&q=90&cs=tinysrgb&crop=&bg="><img src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?dpr=1.25&auto=format&fit=crop&w=267&h=176&q=90&cs=tinysrgb&crop=&bg=" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="retail" data-type="image" href="http://placehold.it/1200x800/3B445B/fff"><img src="http://placehold.it/267x176/3B445B/fff" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="retail" data-type="image" href="http://placehold.it/1200x800/368C72/fff"><img src="http://placehold.it/267x176/368C72/fff" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="retail" data-type="image" href="http://placehold.it/1200x800/383746/fff"><img src="http://placehold.it/267x176/383746/fff" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="retail" data-type="image" href="http://placehold.it/1200x800/D55B3E/fff"><img src="http://placehold.it/267x176/D55B3E/fff" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="retail" data-type="image" href="http://placehold.it/1200x800/00AAA0/fff"><img src="http://placehold.it/267x176/00AAA0/fff" alt=""></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="tabs__pane" id='tab-wholesale'>
+            <h2 class="visuallyhidden">Оптовые продажи</h2>
+            <p>Оптовые продажи электроматериалов - ключевой вид деятельности компании. Клиентами компании являются электромонтажные, строительные организации, промышленные предприятия,  предприятия инфраструктуры, розничные магазины, предприниматели и частные лица.</p>
+            <p>Офисы оптовых продаж «Авента» расположены в  Брянске, Орле, Смоленске. География поставок включает в себя десятки городов и постоянно расширяется за счет освоения компанией новых рынков сбыта. Свой и наемный автопарк, наличие складского запаса позволяют осуществлять доставку товара до потребителя в кратчайшие сроки.</p>
+            <p>Компания стремится создать максимально удобный сервис для работы с клиентом, персональный подход и взаимовыгодные условия.</p>
+
+            <!-- location -->
+            <div class="wholesale-locations">
+              <div class="wholesale-locations__list row">
+                <div class="wholesale-locations__item col-12 col-md-4">
+                  <div class="wholesale-locations__map" id="wholesale-map-1"></div>
+                  <div class="wholesale-locations__address">
+                    <div class="contacts__info">
+                      <p class="contacts__info-item">
+                        г. Брянск, ул. Бурова, д. 8
+                      </p>
+                      <p class="contacts__info-item">
+                        (4832) 220-380 доб. 1,2
+                      </p>
+                      <p class="contacts__info-item contacts__work-time">
+                        <b>Режим работы:</b> <br />
+                        <b>ПН-ПТ</b> с 8:30 до 17:30;
+                        <b>СБ</b> с 9:00 до 17:00; <br />
+                        <b>ВС</b> с 9:00 до 15:00 (с частными лицами)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="wholesale-locations__item col-12 col-md-4">
+                  <div class="wholesale-locations__map" id="wholesale-map-2"></div>
+                  <div class="wholesale-locations__address">
+                    <div class="contacts__info">
+                      <p class="contacts__info-item">
+                        г. Брянск, пр-т. Ст. Димитрова, д. 67
+                      </p>
+                      <p class="contacts__info-item">
+                        (4832) 220-380 доб. 3
+                      </p>
+                      <p class="contacts__info-item contacts__work-time">
+                        <b>Режим работы:</b> <br />
+                        <b>ПН-ПТ</b> с 9:00 до 19:00;
+                        <b>СБ</b> с 9:00 до 17:00; <br />
+                        <b>ВС</b> с 10:00 до 17:00
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="wholesale-locations__item col-12 col-md-4">
+                  <div class="wholesale-locations__map" id="wholesale-map-3"></div>
+                  <div class="wholesale-locations__address">
+                    <div class="contacts__info">
+                      <p class="contacts__info-item">
+                        г. Брянск, ул. Степная, д. 12
+                      </p>
+                      <p class="contacts__info-item">
+                        (4832) 220-380 доб. 4
+                      </p>
+                      <p class="contacts__info-item contacts__work-time">
+                        <b>Режим работы:</b> <br />
+                        <b>ПН-ПТ</b> с 9:00 до 19:00;
+                        <b>СБ</b> с 9:00 до 17:00; <br />
+                        <b>ВС</b> с 10:00 до 17:00
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p>«Авента» готова предложить полный комплекс услуг, состящий из практичных, современных и выгодных решений.</p>
+            <ul>
+              <li>Индивидуальный подход к каждому клиенту;</li>
+              <li>Гибкая система скидок;</li>
+              <li>Широкий ассортимент;</li>
+              <li>Гарантия качества;</li>
+              <li>Информационная поддержка корпоративных клиентов.</li>
+            </ul>
+            <p>Для того, чтобы работать с нами необходимо: отправить заявку, заключить договор.</p>
+            <div class="gallery-slider base-slider">
+              <div class="gallery-slider__item">
+                <a data-fancybox="wholesale" data-type="image" href="https://images.unsplash.com/photo-1498166056926-88805255732e?dpr=1.25&auto=format&fit=crop&w=1200&h=800&q=90&cs=tinysrgb&crop=&bg="><img src="https://images.unsplash.com/photo-1498166056926-88805255732e?dpr=1.25&auto=format&fit=crop&w=267&h=176&q=90&cs=tinysrgb&crop=&bg=" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="wholesale" data-type="image" href="https://images.unsplash.com/photo-1498124987742-5a76f6eaa176?dpr=1.25&auto=format&fit=crop&w=1200&h=800&q=90&cs=tinysrgb&crop=&bg="><img src="https://images.unsplash.com/photo-1498124987742-5a76f6eaa176?dpr=1.25&auto=format&fit=crop&w=267&h=176&q=90&cs=tinysrgb&crop=&bg=" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="wholesale" data-type="image" href="https://images.unsplash.com/photo-1497993787748-d538bf0a8a3b?dpr=1.25&auto=format&fit=crop&w=1200&h=800&q=90&cs=tinysrgb&crop=&bg="><img src="https://images.unsplash.com/photo-1497993787748-d538bf0a8a3b?dpr=1.25&auto=format&fit=crop&w=267&h=176&q=90&cs=tinysrgb&crop=&bg=" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="wholesale" data-type="image" href="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?dpr=1.25&auto=format&fit=crop&w=1200&h=800&q=90&cs=tinysrgb&crop=&bg="><img src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?dpr=1.25&auto=format&fit=crop&w=267&h=176&q=90&cs=tinysrgb&crop=&bg=" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="wholesale" data-type="image" href="http://placehold.it/1200x800/3B445B/fff"><img src="http://placehold.it/267x176/3B445B/fff" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="wholesale" data-type="image" href="http://placehold.it/1200x800/368C72/fff"><img src="http://placehold.it/267x176/368C72/fff" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="wholesale" data-type="image" href="http://placehold.it/1200x800/383746/fff"><img src="http://placehold.it/267x176/383746/fff" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="wholesale" data-type="image" href="http://placehold.it/1200x800/D55B3E/fff"><img src="http://placehold.it/267x176/D55B3E/fff" alt=""></a>
+              </div>
+              <div class="gallery-slider__item">
+                <a data-fancybox="wholesale" data-type="image" href="http://placehold.it/1200x800/00AAA0/fff"><img src="http://placehold.it/267x176/00AAA0/fff" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+    @@include('blocks/site-footer.html')
+  </div>
+</body>
+</html>
