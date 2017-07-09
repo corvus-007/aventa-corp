@@ -35,6 +35,7 @@
 
 .products-preview__wrap-image {
   @include fitObject(1.5, 1, contain);
+
   margin-bottom: $grid-gutter-width / 2;
   text-align: center;
 }
